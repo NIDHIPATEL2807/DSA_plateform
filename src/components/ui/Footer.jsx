@@ -9,7 +9,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="text-center p-4 bg-gray-900 text-white mt-10">
+    <footer className="text-center p-4 bg-gray-900 text-white mt-0">
     <p>© 2025 &lt;करो/&gt; DSA. All rights reserved.</p>
   </footer>
   );

@@ -12,7 +12,7 @@ const FAQCard = ({ question, answer, index }) => {
       data-aos="fade-up"
       data-aos-duration="1000"
       data-aos-delay={index * 100}
-      className="bg-gray-800 text-white p-6 rounded-lg shadow-lg hover:bg-gray-700 transition duration-300"
+      className="bg-blue-900 text-white p-6 rounded-lg shadow-lg hover:bg-gray-700 transition duration-300"
     >
       <h2
         className="text-xl font-semibold mb-4 cursor-pointer"
