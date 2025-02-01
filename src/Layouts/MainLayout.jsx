@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import Footer from "../components/ui/Footer";
-import LoadingXAnimation from "../Components/ui/Loading";
 import Navbar from "../components/ui/Navbar";
 import { ThemeProvider } from "../components/ui/ThemeProvider";
 
@@ -30,7 +29,7 @@ const MainLayout = () => {
           ) : (
             <div className="flex flex-col min-h-screen">
                 <Navbar />
-                <main className="p-4 flex-grow">
+                <main className="flex-grow">
                     <Outlet />
                 </main>
                 <Footer/>

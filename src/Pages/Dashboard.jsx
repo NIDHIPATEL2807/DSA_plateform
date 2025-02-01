@@ -32,7 +32,7 @@ const Sidebar = () => {
         <div className="py-2">
           <div className="flex items-center gap-3 p-2 rounded hover:bg-gray-800">
             <Video className="w-5 h-5" />
-            <span>Karodsa's DSA Playlist</span>
+            <span>DSA Playlist</span>
             <ChevronsUpDown className="w-4 h-4 ml-auto" />
           </div>
         </div>
@@ -47,7 +47,7 @@ const Sidebar = () => {
 
         <Link to="/cp-sheet" className="flex items-center gap-3 p-2 rounded hover:bg-gray-800">
           <BookOpen className="w-5 h-5" />
-          <span>Karodsa's CP Sheet</span>
+          <span>CP Sheet</span>
         </Link>
 
         <Link to="/saved-notes" className="flex items-center gap-3 p-2 rounded hover:bg-gray-800">

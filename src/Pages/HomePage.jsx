@@ -1,10 +1,12 @@
 import Spline from '@splinetool/react-spline';
 import { BookOpen, Facebook, Github, Star, Users, Youtube } from 'lucide-react';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import AnimatedFAQ from '../components/Home/AnimatedFAQ';
 import TestimonialCard from '../components/Home/TestimonialCard';
 
 const HomePage = () => {
+  const navigate = useNavigate()
   const features = [
     {
       title: 'Visual Algorithm Simulations',
@@ -23,6 +25,10 @@ const HomePage = () => {
     },
   ];
 
+  const handleStart = () => {
+    navigate('/dashboard')
+  }
+
   return (
     <div className='h-full w-full m-0 p-0 relative text-white'>
       {/* Spline 3D Background */}
@@ -34,7 +40,7 @@ const HomePage = () => {
       <div className='py-24 flex flex-col items-center text-center px-6'>
         <h1 className='text-5xl font-bold mb-6'>Master DSA Through Interactive Learning</h1>
         <p className='text-2xl mb-8 max-w-3xl'>Join 250,000+ learners mastering algorithms with visual simulations and personalized learning paths.</p>
-        <button className='bg-[#F7E987] text-[#252B48] px-10 py-4 rounded-lg text-lg font-medium hover:bg-yellow-500 transition-all'>
+        <button onClick = {handleStart} className='bg-[#F7E987] text-[#252B48] px-10 py-4 rounded-lg text-lg font-medium hover:bg-yellow-500 transition-all'>
           Start Learning Now
         </button>
       </div>
