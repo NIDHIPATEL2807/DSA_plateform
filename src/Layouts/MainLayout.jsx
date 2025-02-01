@@ -14,7 +14,7 @@ const MainLayout = () => {
       const timer = setTimeout(() => {
         setLoading(false); // Set loading to false after 3 seconds
       }, 3000);
-""
+
       return () => clearTimeout(timer); // Cleanup the timer
     }, []);
     return (
