@@ -135,7 +135,7 @@ const ProfilePage = () => {
           {/* Right Column - Activity & Progress */}
           <div className="col-span-2 space-y-6">
             {/* Recent Activity */}
-            <div className="bg-gray-900 rounded-lg border border-violet-700/30 p-6  transition-transform transform hover:scale-10">
+            <div className="bg-gray-900 rounded-lg border border-violet-700/30 p-6  transition-transform transform hover:scale-103">
               <h2 className="text-lg font-semibold text-violet-300 mb-4">Recent Activity</h2>
               <div className="space-y-4">
                 {recentActivity.map((activity, index) => (
