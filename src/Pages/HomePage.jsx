@@ -1,17 +1,12 @@
-import React, { useEffect } from 'react';
-import { Github, Youtube, Facebook, Star, BookOpen, Users } from 'lucide-react';
-import TestimonialCard from '../components/Home/TestimonialCard';
-import AnimatedFAQ from '../components/Home/AnimatedFAQ';
 import Spline from '@splinetool/react-spline';
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // Import AOS styles
-import Card from '../components/Home/Card'; // Import the Card component
+import { BookOpen, Facebook, Github, Star, Users, Youtube } from 'lucide-react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import AnimatedFAQ from '../components/Home/AnimatedFAQ';
+import TestimonialCard from '../components/Home/TestimonialCard';
 
 const HomePage = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: true }); // Initialize AOS with custom options
-  }, []);
-
+  const navigate = useNavigate()
   const features = [
     {
       title: 'Visual Algorithm Simulations',
@@ -45,41 +40,25 @@ const HomePage = () => {
       icon: <Star className='w-10 h-10 text-[#F7E987]' />, // You can choose a different icon if you prefer
     },
   ];
-  
+
+  const handleStart = () => {
+    navigate('/dashboard')
+  }
+
   return (
     <div className='h-full w-full m-0 p-0 relative text-white'>
       {/* Spline 3D Background with Animation */}
       <div className='absolute inset-0 w-full h-full -z-20'>
         <Spline scene='https://prod.spline.design/JeNulpnRHRvS75lO/scene.splinecode' />
       </div>
-
-      {/* Hero Section with 3D Background */}
-      <div className='h-full w-full m-0 p-0 relative text-white'>
-        {/* First Spline for Hero Section */}
-        <div
-          className='absolute inset-0 w-full h-full -z-10'
-          style={{
-            transform: 'translateY(-10%)', // Optional: Move the scene slightly up if needed
-            transition: 'transform 0.5s ease-in-out', // Optional: Add smooth transition
-          }}
-        >
-          <Spline scene='https://prod.spline.design/JeNulpnRHRvS75lO/scene.splinecode' />
-        </div>
-
-        {/* Hero Section Content */}
-        <div className='py-24 flex flex-col items-center text-center px-6 relative z-10'>
-          <h1 className='text-5xl font-bold mb-6'>Master DSA Through Interactive Learning</h1>
-
-          {/* Horizontal line */}
-          <div className='w-1/2 border-t-2 border-gray-600 my-6'></div>
-
-          <p className='text-2xl mb-8 max-w-3xl'>
-            Join 250,000+ learners mastering algorithms with visual simulations and personalized learning paths.
-          </p>
-          <button className='bg-[#F7E987] text-[#252B48] px-10 py-4 rounded-lg text-lg font-medium hover:bg-yellow-500 transition-all'>
-            Start Learning Now
-          </button>
-        </div>
+      
+      {/* Hero Section */}
+      <div className='py-24 flex flex-col items-center text-center px-6'>
+        <h1 className='text-5xl font-bold mb-6'>Master DSA Through Interactive Learning</h1>
+        <p className='text-2xl mb-8 max-w-3xl'>Join 250,000+ learners mastering algorithms with visual simulations and personalized learning paths.</p>
+        <button onClick = {handleStart} className='bg-[#F7E987] text-[#252B48] px-10 py-4 rounded-lg text-lg font-medium hover:bg-yellow-500 transition-all'>
+          Start Learning Now
+        </button>
       </div>
 
       {/* Features Section */}
