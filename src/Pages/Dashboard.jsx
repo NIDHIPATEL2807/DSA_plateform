@@ -1,7 +1,8 @@
 import { Bookmark, BookOpen, ChevronsUpDown, Database, Settings, Star, Video } from 'lucide-react';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ChatBot from '../components/ui/ChatBot';
+import ProgressTracker from '../components/ui/ProgressTracker';
 
 const Sidebar = () => {
   return (
@@ -76,6 +77,7 @@ const Sidebar = () => {
 };
 
 const Dashboard = () => {
+    const [isOpen, setIsOpen] = useState(false);
   const progress = {
     current: 12,
     total: 455,
@@ -96,7 +98,7 @@ const Dashboard = () => {
       <main className="flex-1 p-8">
         <div className="max-w-4xl mx-auto">
           <p className="text-gray-300 mb-8">
-            lecture quality is better than what you get in paid courses, the only thing we don't provide is doubt support, but trust me our YouTube video comments resolve that as well, we have a wonderful community of 250K+ people who engage in all of the videos.
+            Lecture Quality is better than what you get in paid courses, the only thing we don't provide is doubt support, but trust me our YouTube video comments resolve that as well, we have a wonderful community of 250K+ people who engage in all of the videos.
           </p>
 
           <div className="mb-8">
@@ -108,7 +110,7 @@ const Dashboard = () => {
               <h2 className="text-gray-200 text-lg font-semibold">Note</h2>
             </div>
 
-            <div className="bg-gray-800 p-4 rounded-lg mb-8">
+            {/* <div className="bg-gray-800 p-4 rounded-lg mb-8">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-gray-300">Your Progress: {progress.current}/{progress.total}</span>
                 <span className="text-red-500">{progress.percentage}% complete</span>
@@ -119,13 +121,22 @@ const Dashboard = () => {
                   style={{ width: `${progress.percentage}%` }}
                 ></div>
               </div>
-            </div>
+            </div> */}
 
+            <ProgressTracker />
+            <div className = "h-6"></div>
             {sections.map((section, index) => (
+                <>
               <div key={index} className="bg-gray-800 p-4 rounded-lg mb-4 flex justify-between items-center">
                 <h2 className="text-gray-200">{section.title}</h2>
                 <span className="text-gray-400">{section.progress}</span>
               </div>
+              {/* {isOpen ? (
+                          <ChevronUp className="ml-2 text-gray-400" />
+                        ) : (
+                          <ChevronDown className="ml-2 text-gray-400" />
+                        )}</> */}
+                        </>
             ))}
           </div>
         </div>
