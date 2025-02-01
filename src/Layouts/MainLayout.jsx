@@ -1,13 +1,10 @@
-
 import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import Footer from "../components/ui/Footer";
 import Navbar from "../components/ui/Navbar";
 import { ThemeProvider } from "../components/ui/ThemeProvider";
 
-
 import Loader from "../components/ui/Loader";
-
 
 const MainLayout = () => {
     const [loading, setLoading] = useState(true);
@@ -17,7 +14,7 @@ const MainLayout = () => {
       const timer = setTimeout(() => {
         setLoading(false); // Set loading to false after 3 seconds
       }, 3000);
-  
+""
       return () => clearTimeout(timer); // Cleanup the timer
     }, []);
     return (
