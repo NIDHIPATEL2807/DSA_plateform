@@ -1,6 +1,7 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Correct import
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'; // Correct import
 import './App.css';
 import MainLayout from './Layouts/MainLayout';
+import Dashboard from './Pages/Dashboard';
 import HomePage from './Pages/HomePage';
 
 function App() {
@@ -12,6 +13,8 @@ function App() {
           <Route path="/" element={<MainLayout />}>
             {/* HomePage will be rendered by default when accessing "/" */}
             <Route index element={<HomePage />} /> 
+          </Route>
+          <Route path="/dashboard" element={<Dashboard />}>
           </Route>
         </Routes>
       </Router>

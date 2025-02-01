@@ -1,8 +1,13 @@
+import { BookOpen, Facebook, Github, Star, Users, Youtube } from 'lucide-react';
 import React from 'react';
-import { Github, Youtube, Facebook, Star, Award, BookOpen, Users, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import TestimonialCard from '../components/Home/TestimonialCard';
 
 const HomePage = () => {
+  const navigate = useNavigate();
+  const handleStart = () =>{
+    navigate('/dashboard')
+  }
   const features = [
     {
       title: "Visual Algorithm Simulations",
@@ -46,7 +51,7 @@ const HomePage = () => {
             <p className="text-xl text-gray-600 mb-8">
               Join 250,000+ learners mastering algorithms with visual simulations and personalized learning paths
             </p>
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-blue-700">
+            <button onClick={handleStart} className="bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-blue-700">
               Start Learning Now
             </button>
           </div>
