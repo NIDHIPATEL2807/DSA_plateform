@@ -29,12 +29,8 @@ const MainLayout = () => {
           ) : (
             <div className="flex flex-col min-h-screen">
                 <Navbar />
-<<<<<<< HEAD
                 <main className="p-0 flex-grow">
-=======
-                <main className="flex-grow">
->>>>>>> 9ce51a79016607e71531149be6d7a19ed5bf24b5
-                    <Outlet />
+                  <Outlet />
                 </main>
                 <Footer/>
             </div>

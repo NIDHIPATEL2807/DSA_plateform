@@ -4,6 +4,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import AnimatedFAQ from '../components/Home/AnimatedFAQ';
 import TestimonialCard from '../components/Home/TestimonialCard';
+import Card from '../components/Home/Card';
 
 const HomePage = () => {
   const navigate = useNavigate()
