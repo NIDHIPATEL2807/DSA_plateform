@@ -5,6 +5,7 @@ import { ThemeProvider } from "../components/ui/ThemeProvider";
 import Footer from "../components/ui/Footer"
 import { useEffect, useState } from "react";
 import LoadingXAnimation from "../Components/ui/Loading";
+import Loader from "../components/ui/Loader";
 
 const MainLayout = () => {
     const [loading, setLoading] = useState(true);
@@ -22,7 +23,7 @@ const MainLayout = () => {
         <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
         
         {loading ? (
-            <LoadingXAnimation />
+            <Loader />
           ) : (
             <div className="flex flex-col min-h-screen">
                 <Navbar />

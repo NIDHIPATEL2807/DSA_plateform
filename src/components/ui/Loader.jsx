@@ -31,7 +31,12 @@ const Loader = () => {
 }
 
 const StyledWrapper = styled.div`
-  /* 3D tower loader made by: csozi | Website: www.csozi.hu*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
 
   .loader {
     scale: 3;
@@ -163,6 +168,7 @@ const StyledWrapper = styled.div`
       translate: 0px 30px;
       opacity: 0;
     }
-  }`;
+  }
+`;
 
 export default Loader;
