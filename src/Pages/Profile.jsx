@@ -9,6 +9,7 @@ import {
     User
 } from 'lucide-react';
 import React, { useState } from 'react';
+import ProgressCalendar from '../components/ui/ProgressCalendar';
 
 const ProfilePage = () => {
   const [isEditing, setIsEditing] = useState(false);
@@ -167,6 +168,7 @@ const ProfilePage = () => {
             <div className="bg-gray-900 rounded-lg border border-violet-700/30 p-6">
               <h2 className="text-lg font-semibold text-violet-300 mb-4">Solving History</h2>
               {/* Add ActivityCalendar component here */}
+              <ProgressCalendar />
             </div>
           </div>
         </div>
