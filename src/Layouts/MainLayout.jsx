@@ -1,11 +1,14 @@
 
+import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
+import Footer from "../components/ui/Footer";
+import LoadingXAnimation from "../Components/ui/Loading";
 import Navbar from "../components/ui/Navbar";
 import { ThemeProvider } from "../components/ui/ThemeProvider";
-import Footer from "../components/ui/Footer"
-import { useEffect, useState } from "react";
-import LoadingXAnimation from "../Components/ui/Loading";
+
+
 import Loader from "../components/ui/Loader";
+
 
 const MainLayout = () => {
     const [loading, setLoading] = useState(true);
